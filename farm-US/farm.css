@@ -49,4 +49,26 @@ body{
     height: 5vh;
 
 }
+
+#para{
+    margin-top: 18px;
+}
+#period{
+    margin-top: -27px;
+}
+#Startdate{
+     width: 17vh;
+     height: 5vh;
+}
+#Enddate{
+     width: 17vh;
+     height: 5vh;
+}
+#Submit{
+    border-radius: 2%;
+    height: 5vh;
+    width: 36vh;
+    margin-top: 21px;
+}
+
   
