@@ -1,0 +1,237 @@
+[
+  {
+    "state": "Maharashtra",
+    "seasons": {
+      "Kharif": [
+        {
+          "crop": "Pearl Millet (Bajra)",
+          "cost_per_acre": 1400
+        },
+        {
+          "crop": "Cowpea (Lobia)",
+          "cost_per_acre": 1600
+        },
+        {
+          "crop": "Green Gram (Moong)",
+          "cost_per_acre": 1800
+        }
+      ],
+      "Rabi": [
+        {
+          "crop": "Lentil (Masoor)",
+          "cost_per_acre": 1400
+        },
+        {
+          "crop": "Chickpea (Chana)",
+          "cost_per_acre": 1600
+        },
+        {
+          "crop": "Mustard",
+          "cost_per_acre": 1800
+        }
+      ],
+      "Zaid": [
+        {
+          "crop": "Maize",
+          "cost_per_acre": 1400
+        },
+        {
+          "crop": "Sesame (Til)",
+          "cost_per_acre": 1600
+        },
+        {
+          "crop": "Black Gram (Urd)",
+          "cost_per_acre": 1800
+        }
+      ]
+    }
+  },
+  {
+    "state": "Gujrat",
+    "seasons": {
+      "Kharif": [
+        {
+          "crop": "Pearl Millet (Bajra)",
+          "cost_per_acre": 1400
+        },
+        {
+          "crop": "Pigeon Pea (Arhar)",
+          "cost_per_acre": 1600
+        },
+        {
+          "crop": "Sesame (Til)",
+          "cost_per_acre": 1800
+        }
+      ],
+      "Rabi": [
+        {
+          "crop": "Wheat",
+          "cost_per_acre": 1400
+        },
+        {
+          "crop": "Chickpea (Chana)",
+          "cost_per_acre": 1600
+        },
+        {
+          "crop": "Barley",
+          "cost_per_acre": 1800
+        }
+      ],
+      "Zaid": [
+        {
+          "crop": "Watermelon",
+          "cost_per_acre": 1400
+        },
+        {
+          "crop": "Cucumber",
+          "cost_per_acre": 1600
+        },
+        {
+          "crop": "Okra",
+          "cost_per_acre": 1800
+        }
+      ]
+    }
+  },
+  {
+    "state": "Punjab",
+    "seasons": {
+      "Kharif": [
+        {
+          "crop": "Maize",
+          "cost_per_acre": 1400
+        },
+        {
+          "crop": "Paddy (Rice)",
+          "cost_per_acre": 1600
+        },
+        {
+          "crop": "Cotton",
+          "cost_per_acre": 1800
+        }
+      ],
+      "Rabi": [
+        {
+          "crop": "Wheat",
+          "cost_per_acre": 1400
+        },
+        {
+          "crop": "Mustard",
+          "cost_per_acre": 1600
+        },
+        {
+          "crop": "Gram (Chana)",
+          "cost_per_acre": 1800
+        }
+      ],
+      "Zaid": [
+        {
+          "crop": "Moong (Green Gram)",
+          "cost_per_acre": 1400
+        },
+        {
+          "crop": "Mash (Black Gram)",
+          "cost_per_acre": 1600
+        },
+        {
+          "crop": "Sesame (Til)",
+          "cost_per_acre": 1800
+        }
+      ]
+    }
+  },
+  {
+    "state": "Andhra Pradesh",
+    "seasons": {
+      "Kharif": [
+        {
+          "crop": "Maize",
+          "cost_per_acre": 1400
+        },
+        {
+          "crop": "Groundnut",
+          "cost_per_acre": 1600
+        },
+        {
+          "crop": "Paddy (Rice)",
+          "cost_per_acre": 1800
+        }
+      ],
+      "Rabi": [
+        {
+          "crop": "Sorghum (Jowar)",
+          "cost_per_acre": 1400
+        },
+        {
+          "crop": "Green Gram (Moong)",
+          "cost_per_acre": 1600
+        },
+        {
+          "crop": "Sunflower",
+          "cost_per_acre": 1800
+        }
+      ],
+      "Zaid": [
+        {
+          "crop": "Watermelon",
+          "cost_per_acre": 1400
+        },
+        {
+          "crop": "Cucumber",
+          "cost_per_acre": 1600
+        },
+        {
+          "crop": "Bottle Gourd",
+          "cost_per_acre": 1800
+        }
+      ]
+    }
+  },
+  {
+    "state": "Karnataka",
+    "seasons": {
+      "Kharif": [
+        {
+          "crop": "Finger Millet (Ragi)",
+          "cost_per_acre": 1400
+        },
+        {
+          "crop": "Maize",
+          "cost_per_acre": 1600
+        },
+        {
+          "crop": "Paddy (Rice)",
+          "cost_per_acre": 1800
+        }
+      ],
+      "Rabi": [
+        {
+          "crop": "Chickpea (Chana)",
+          "cost_per_acre": 1400
+        },
+        {
+          "crop": "Lentil (Masoor)",
+          "cost_per_acre": 1600
+        },
+        {
+          "crop": "Mustard",
+          "cost_per_acre": 1800
+        }
+      ],
+      "Zaid": [
+        {
+          "crop": "Cucumber",
+          "cost_per_acre": 1400
+        },
+        {
+          "crop": "Watermelon",
+          "cost_per_acre": 1600
+        },
+        {
+          "crop": "Bottle Gourd",
+          "cost_per_acre": 1800
+        }
+      ]
+    }
+  }
+]

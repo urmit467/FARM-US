@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevention</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="crop_suggestion.css">
+</head>
+<style>
+    body {
+        background: linear-gradient(135deg, #0c191e, #16272d, #1d3642, #274455);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #f8f9fa;
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        background: rgba(12, 25, 30, 0.9) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-brand {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: #20c997 !important;
+        transform: translateY(-2px);
+    }
+
+    .introduction {
+        height: 500px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .logo {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        margin-top: 20px;
+        margin-left: 1400px;
+        z-index: 3;
+        transition: transform 0.5s ease;
+    }
+
+    .logo:hover {
+        transform: rotate(15deg) scale(1.1);
+    }
+
+    .logo img {
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(255, 249, 249, 0.7);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .intro {
+        position: absolute;
+        overflow: hidden;
+        height: 500px;
+        width: 600px;
+        margin-top: 60px;
+        margin-left: 80px;
+        z-index: 2;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: transform 0.5s ease;
+    }
+
+    .intro:hover {
+        transform: scale(1.02);
+    }
+
+    .intro img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(0.9) contrast(1.1);
+    }
+
+    .image-back {
+        position: absolute;
+        height: 500px;
+        width: 600px;
+        background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+        z-index: 1;
+        margin-top: 90px;
+        margin-left: 110px;
+        border-radius: 10px;
+        transform: rotate(2deg);
+    }
+
+    .page2 {
+        height: 500px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .outter-box {
+        height: 100%;
+        width: 40%;
+        position: relative;
+    }
+
+    #box {
+        position: relative;
+        background: rgba(19, 19, 19, 0.8);
+        backdrop-filter: blur(10px);
+        height: 400px;
+        width: 370px;
+        margin-top: 0px;
+        margin-left: 300px;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    #box:hover {
+        transform: translateY(-5px);
+    }
+
+    select, input {
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+        color: #333;
+        background-color: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 8px;
+        padding: 0 15px;
+        font-size: 16px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    select:focus, input:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.3);
+        transform: translateY(-2px);
+    }
+
+    #btn {
+        background: linear-gradient(45deg, #20c997, #3bc9db);
+        width: 100%;
+        height: 50px;
+        margin-top: 25px;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(32, 201, 151, 0.4);
+        transition: all 0.3s ease;
+    }
+
+    #btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(32, 201, 151, 0.6);
+    }
+
+    .page2-text {
+        margin-top: 100px;
+        width: 60%;
+        padding: 0 50px;
+    }
+
+    .page2-heading {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 80%;
+        margin-left: 100px;
+        font-weight: bold;
+        margin-top: 60px;
+        font-size: 2.2rem;
+        line-height: 1.3;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .page2-img {
+        position: absolute;
+        height: 400px;
+        width: 500px;
+        margin-left: 16px;
+        z-index: 2;
+        margin-top: 50px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: transform 0.5s ease;
+    }
+
+    .page2-img:hover {
+        transform: scale(1.03);
+    }
+
+    .page2-img img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(0.9) contrast(1.1);
+    }
+
+    .page2-back {
+        position: absolute;
+        height: 400px;
+        width: 500px;
+        background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+        margin-top: 65px;
+        border-radius: 10px;
+        transform: rotate(-2deg);
+    }
+
+    #page3 {
+        height: 200px;
+        width: 100%;
+    }
+
+    #page4 {
+        height: 10px;
+        width: 100%;
+    }
+
+    .footer {
+        margin-left: 10%;
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        position: relative;
+        bottom: 0;
+        width: 80%;
+        height: 180px;
+        display: flex;
+        border-radius: 30px 30px 0 0;
+        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        align-items: center;
+    }
+
+    .logo_1 {
+        background-color: black;
+        position: relative;
+        height: 80px;
+        width: 80px;
+        margin-left: 30px;
+        overflow: hidden;
+        border-radius: 50%;
+        left: 100px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .logo_1:hover {
+        transform: scale(1.1);
+    }
+
+    .logo_1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .services {
+        margin-left: 120px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 300px;
+    }
+
+    .services p {
+        color: #495057;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .services li {
+        color: #6c757d;
+        list-style: none;
+        margin-bottom: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .services li:hover {
+        color: #20c997;
+        transform: translateX(5px);
+    }
+
+    .services a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .social {
+        text-align: left;
+    }
+
+    .social p {
+        color: #495057;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .social-text li {
+        color: #6c757d;
+        list-style: none;
+        margin-bottom: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .social-text li:hover {
+        color: #20c997;
+        transform: translateX(5px);
+    }
+
+    .social_icons {
+        display: flex;
+        gap: 15px;
+        margin-left: 120px;
+        margin-top: 10px;
+    }
+
+    .social_icons a {
+        color: #6c757d;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .social_icons a:hover {
+        color: #20c997;
+        transform: translateY(-3px);
+    }
+
+    .brand-text {
+        color: #212529;
+        margin-left: 50px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: underline;
+        font-style: italic;
+        transition: all 0.3s ease;
+    }
+
+    .brand-text:hover {
+        color: #20c997;
+    }
+
+    /* Text styling */
+    .welcome-text-1 {
+        position: absolute;
+        font-size: 5rem;
+        color: #212529;
+        margin-left: 570px;
+        margin-top: 42px;
+        z-index: 3;
+        font-weight: 800;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .welcome-text-2 {
+        position: absolute;
+        font-size: 5rem;
+        color: #adb5bd;
+        margin-left: 717px;
+        margin-top: 45px;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+        font-weight: 800;
+    }
+
+    .intro-text {
+        position: absolute;
+        color: #f8f9fa;
+        margin-left: 725px;
+        margin-top: 180px;
+        font-size: 1.5rem;
+        width: 700px;
+        line-height: 1.6;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .quote-text {
+        margin-left: 20px;
+        margin-top: 10px;
+        text-align: center;
+        color: #6c757d;
+        font-style: italic;
+        line-height: 1.6;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1600px) {
+        .logo {
+            margin-left: 92%;
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .intro, .image-back {
+            width: 500px;
+        }
+        .welcome-text-1, .welcome-text-2 {
+            font-size: 4rem;
+        }
+        .intro-text {
+            width: 600px;
+            font-size: 1.3rem;
+        }
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Farm-US</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="../main_web/farm.html">Home</a>
+                    <a class="nav-link" href="">Features</a>
+                    <a class="nav-link" href="login/login.html">Logout</a>
+                    <p
+                        style="margin-top: 10px; margin-left: 500px; font-weight: bold; font-family:cursive; font-size: large; color: rgb(255, 254, 253);">
+                        Sow your crop data in the form below—your loan eligibility will bloom from it.</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- page 1st -->
+    <div class="introduction">
+        <div class="intro">
+            <img src="farmer.jpg" alt="">
+        </div>
+        <div class="image-back"></div>
+        <h1 class="welcome-text-1">We</h1>
+        <h1 class="welcome-text-2">lcome,Farmers!</h1>
+
+        <p class="intro-text">
+            We're here to support you with expert guidance and tools for successful crop recovery.
+        </p>
+       
+        <div class="logo"><img src="logo.png" alt=""></div>
+    </div>
+
+    <!-- this is 2nd page -->
+    <div class="page2">
+        <div class="page2-text">
+            <h3 class="page2-heading">
+                We're here to help you make the most of your land and your hard work. Just tell us:
+            </h3>
+            <div id="box">
+                <select name="state" id="state">
+                    <option value="">select state</option>
+                    <option value="Maharashtra">marashtra</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh </option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Karnataka">Karnataka</option>
+                </select>
+                <select name="season" id="season">
+                    <option value="">select season</option>
+                    <option value="rabi">rabi</option>
+                    <option value="kharif">kharif </option>
+                    <option value="zaid">zaid</option>
+                </select>
+
+                <input type="number" name="area" id="area" placeholder="area in acres:">
+                <input type="number" name="budget" id="budget" placeholder="budget in rupees:">
+                <button id="btn"> Submit</button>
+            </div>
+        </div>
+        <div class="outter-box">
+            <div class="page2-img">
+                <img src="old-man.jpg" alt="">
+            </div>
+            <div class="page2-back"></div>
+        </div>
+    </div>
+
+    <!-- page 3rd -->
+    <div id="page3"></div>
+
+    <!-- page4 -->
+    <div id="page4"></div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="quote-box">
+            <p class="quote-text">"Thank you, farmers, for your tireless dedication, hard work, and resilience in feeding the world. Your efforts sustain our lives and nourish our future—you're true everyday heroes."</p>
+        </div>
+
+        <div class="services">
+            <p>services</p>
+            <li><a href="">crop suggestion</a></li>
+            <li><a href="">crop failure recovery</a></li>
+            <li><a href=""></a></li>
+        </div>
+        <div class="social">
+            <p>social</p>
+            <div class="social-text">
+                <li>facebook</li>
+                <li>twitter</li>
+                <li>instagram</li>
+            </div>
+            <div class="social_icons">
+                <a href="#" class="fab fa-facebook"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>
+        </div>
+        <div class="brand">
+            <div class="logo_1">
+                <img src="logo.png" alt="">
+            </div>
+            <p class="brand-text">Farm us</p>
+        </div>
+    </div>
+
+    <script src="web2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+</html>
