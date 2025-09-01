@@ -13,7 +13,6 @@ function calculateLoanTotal() {
     const principal = Number(document.getElementById("input4").value);
     const annualInterestRate = Number(document.getElementById("input5").value); 
     const durationYears = Number(document.getElementById("input6").value);
-
     return principal * (1 + (annualInterestRate / 100) * durationYears);
 }
 
@@ -43,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const avgSurplusPerMonth = calculateAverageSurplus(); 
         const totalLoanRepayment = calculateLoanTotal(); 
         const loanRepaymentPerMonth = totalLoanRepayment / (f * 12);
-
+        const diff=avgSurplusPerMonth-loanRepaymentPerMonth;
       
         const threshold = loanRepaymentPerMonth + 2500;
         const isEligible = avgSurplusPerMonth > threshold;
@@ -59,8 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         canvas.width = 500;
         canvas.height = 400;
         canvas.style.backgroundColor = "white";
-       
-        canvas.style.display = "block";
+        // canvas.style.display = "block";
         canvas.style.margin = "20px";
         loanContainer.appendChild(canvas);
 
@@ -73,11 +71,11 @@ document.addEventListener("DOMContentLoaded", function () {
         
 
         if (isEligible) {
-            messagePara.textContent = "Congratulations! Your average monthly surplus is sufficient to cover the loan repayment plus a ₹2,500 buffer. You are eligible for the loan. 🌾💸";
+            messagePara.textContent = `Congratulations! Your average monthly surplus is sufficient to cover the loan repayment plus a  ${diff} buffer. You are eligible for the loan. 🌾💸`;
             messagePara.style.color = "#2A7F2A"; 
             
         } else {
-            messagePara.textContent = "Unfortunately, your current surplus isn't enough to cover the loan repayment plus a ₹2,500 buffer. You are not eligible for the loan under these conditions.";
+            messagePara.textContent = `Unfortunately, your current surplus isn't enough to cover the loan repayment plus a ${diff} buffer. You are not eligible for the loan under these conditions.`;
             messagePara.style.color = "#BF2A2A";
         }
         loanContainer.appendChild(messagePara);
