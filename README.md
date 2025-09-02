@@ -1,9 +1,9 @@
 # FARM-US
  Smart Farming Assistant
-Welcome to AgriHelper, a comprehensive web application designed to empower farmers by providing them with data-driven tools and valuable insights for modern agriculture. Our mission is to help farmers make informed decisions to increase profitability, manage financial risks, and recover from unforeseen crop damage.
+Welcome to FarmUS, a comprehensive web application designed to empower farmers by providing them with data-driven tools and valuable insights for modern agriculture. Our mission is to help farmers make informed decisions to increase profitability, manage financial risks, and recover from unforeseen crop damage.
 
 Features
-AgriHelper is divided into four main sections, each tailored to address a specific challenge faced by farmers:
+FarmUS is divided into four main sections, each tailored to address a specific challenge faced by farmers:
 
 1. Crop Yield Maximizer
 This page helps you discover which crops are best suited for your specific land conditions to achieve the maximum possible yield.
@@ -27,10 +27,10 @@ Low-Cost Solutions: Get suggestions for alternative crops that are less expensiv
 Minimize Losses: This feature helps you quickly utilize your land to recover potential losses and prepare for the next full sowing season.
 
 4. About Us
-Learn more about the team behind AgriHelper and our commitment to supporting the farming community through technology.
+Learn more about the team behind FarmUS and our commitment to supporting the farming community through technology.
 
 How to Use
-Navigating and using AgriHelper is simple and intuitive:
+Navigating and using FarmUS is simple and intuitive:
 
 Select a Tool: Open the web application and choose one of the four pages from the navigation menu based on your needs.
 
@@ -41,6 +41,6 @@ Receive Your Guidance: Click the "Submit" or "Analyze" button to instantly recei
 Plan Your Next Steps: Use the information provided to make strategic decisions for your farm.
 
 Our Vision
-We believe that by integrating technology with traditional farming wisdom, we can help build a more sustainable and profitable future for farmers everywhere. AgriHelper is our first step towards achieving that goal.
+We believe that by integrating technology with traditional farming wisdom, we can help build a more sustainable and profitable future for farmers everywhere. FarmUS is our first step towards achieving that goal.
 
-Thank you for using AgriHelper!
+Thank you for using FarmUS!
